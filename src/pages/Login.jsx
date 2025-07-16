@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { auth, db, googleProvider } from '../firebase';
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -117,9 +117,9 @@ function LoginPage() {
 
         <p className="text-sm text-center mt-4">
           Don’t have an account?{' '}
-          <a href="/signup" className="text-blue-600 hover:underline">
+          <Link to="/signup" className="text-blue-600 hover:underline">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>
