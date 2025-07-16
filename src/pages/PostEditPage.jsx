@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/Authcontext';
 
 function PostEditPage() {
   const { id } = useParams();
